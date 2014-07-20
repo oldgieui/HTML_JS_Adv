@@ -34,7 +34,7 @@
 			var obj = {
 				strTexts : " 은 정말 몸에 좋아요 ^^",
 				registerEvents : function() {
-					list = document.querySelectorAll("ul, li");
+					list = document.querySelectorAll("ul li");
 					for (var i=0; i < list.length; i++) {
 						var message = list[i].innerText + this.strTexts;
 						list[i].addEventListener("click", function(){console.log(message);}, false);
