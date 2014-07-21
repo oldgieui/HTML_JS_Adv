@@ -20,13 +20,13 @@
 
 	<body>
 		<ul>
-			<li>
+			<li id = "ss">
 				선식
 			</li>
-			<li>
+			<li id = "tomato">
 				토마토
 			</li>
-			<li>
+			<li id = "galric">
 				마늘
 			</li>
 		</ul>
@@ -34,11 +34,15 @@
 			var obj = {
 				strTexts : " 은 정말 몸에 좋아요 ^^",
 				registerEvents : function() {
-					list = document.querySelectorAll("ul li");
-					for (var i=0; i < list.length; i++) {
-						var message = list[i].innerText + this.strTexts;
-						list[i].addEventListener("click", function(){console.log(message);}, false);
-					};
+					var ss = document.getElementById("ss");
+					var ssText = ss.innerText + this.strTexts;
+					var tomato = document.getElementById("tomato");
+					var tomatoText = tomato.innerText + this.strTexts;
+					var galric = document.getElementById("galric");
+					var galricText = galric.innerText + this.strTexts;
+					ss.addEventListener("click", function(){console.log(ssText);}, false);
+					tomato.addEventListener("click", function(){console.log(tomatoText);}, false);
+					galric.addEventListener("click", function(){console.log(galricText);}, false);
 				}
 			};
 		</script>
